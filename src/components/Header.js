@@ -17,7 +17,7 @@ function Header( {addCart}) {
                 <Typography className = {classes.typographyStyles}>
                     Fake Store
                 </Typography>
-        <ShoppingCartIcon />{addCart}
+{addCart}
             </Toolbar>
         </AppBar>
     )
