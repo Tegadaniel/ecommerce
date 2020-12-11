@@ -14,7 +14,7 @@ const GoodsGrid = ({items, isLoading, addCart}) => {
 return isLoading ? (<h1>Loading....</h1>) :
         (<Grid container spacing ={4}  className = {classes.gridStyles}>
             {items.map((item) =>(
-	     <Grid item xs={4}  key={item.id}>
+	     <Grid item xs={4}  sm ={8} key={item.id}>
        		 <GoodsList item={item} addCart={addCart}> </GoodsList>
               </Grid>   
             ))}
