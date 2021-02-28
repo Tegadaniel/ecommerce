@@ -5,8 +5,13 @@ import {makeStyles} from '@material-ui/styles'
 
 const useStyles = makeStyles(() => ({
     gridStyles: {
-        marginTop: '65px'
-    }
+        marginTop: '65px',
+        flexGrow: 1,
+        display: 'block',
+    },
+    control: {
+        padding: theme.spacing(4),
+      },
 }))
 
 const GoodsGrid = ({items, isLoading, addCart}) => {
