@@ -10,6 +10,7 @@ function Body() {
     const [isLoading, setisLoading] = useState(true)
 
     useEffect(() =>{
+        console.log(2+3)
         const fetchItems = async () =>{
             const result = await axios(`https://fakestoreapi.com/products`)
             console.log(result.data)

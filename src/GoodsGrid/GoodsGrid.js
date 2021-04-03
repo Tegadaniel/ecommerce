@@ -3,7 +3,7 @@ import { Grid } from '@material-ui/core';
 import GoodsList from './GoodsList';
 import {makeStyles} from '@material-ui/styles'
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     gridStyles: {
         marginTop: '65px',
         flexGrow: 1,
@@ -15,6 +15,7 @@ const useStyles = makeStyles(() => ({
 }))
 
 const GoodsGrid = ({items, isLoading, addCart}) => {
+    console.log(2+3)
     const classes = useStyles();
 return isLoading ? (<h1>Loading....</h1>) :
         (<Grid container spacing ={4}  className = {classes.gridStyles}>
