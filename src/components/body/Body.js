@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import {Grid} from '@material-ui/core'
-import Header from '../header/Header'
 import axios from 'axios'
 import GoodsGrid from '../../grid/goodsGrid/GoodsGrid'
+import Header from '../header/Header'
 
 function Body() {
     const [items, setItems] = useState([])
@@ -10,7 +10,6 @@ function Body() {
     const [isLoading, setisLoading] = useState(true)
 
     useEffect(() =>{
-        console.log(2+3)
         const fetchItems = async () =>{
             const result = await axios(`https://fakestoreapi.com/products`)
             console.log(result.data)
@@ -30,7 +29,7 @@ function Body() {
     return (
 
     <Grid container direction = "column">
-        {/* <Header addCart={cart.length}/> */}
+        <Header  addCart={cart.length}/>
         <Grid item container >
             <Grid item xs={false} sm={2}/>
         <Grid item xs={12} sm ={8}>

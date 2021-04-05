@@ -34,7 +34,7 @@ function Header( {addCart}) {
                 <Grid item xs={1}>
                 <Link to ="/cart">
                 <IconButton arial-label = "Show cart Items">
-                <Badge badgeContent={2} color="secondary">
+                <Badge badgeContent={ addCart} color="secondary">
                 <ShoppingCartIcon className = {classes.cartStyles} />
                 </Badge>
                 </IconButton>
