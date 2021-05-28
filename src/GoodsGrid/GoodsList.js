@@ -11,7 +11,6 @@ import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
@@ -50,12 +49,10 @@ const GoodsList = ({item, addCart}) => {
     setExpanded(!expanded);
   };
     return(
-      <Card className={classes.root}>
+      <Card className={classes.root} >
       <CardHeader
         avatar={
-          <Avatar aria-label="item" className={classes.avatar}>
-            I
-          </Avatar>
+          <Avatar alt="item-pic" src ={item.image}/>
         }
 
         title={item.category}
@@ -72,9 +69,6 @@ const GoodsList = ({item, addCart}) => {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton> 
         <IconButton aria-label="cart" onClick={() => addCart(item)}>
         <ShoppingCartIcon />
         </IconButton>
